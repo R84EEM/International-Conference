@@ -127,6 +127,27 @@
             .table-wrapper { flex-direction: column; } 
             table { width: 100%; } 
         }
+       @media (max-width: 768px) {
+    body { font-size: 14px; }
+    .container, .glass-box, .header-section, .content-section { 
+        width: 92% !important; 
+        margin: 10px auto !important; 
+        padding: 15px !important; 
+    }
+    .names-grid, .flex-container, .row, .committee-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 20px !important;
+    }
+    .names-grid > div, .committee-member {
+        width: 100% !important;
+    }
+    .btn { width: 90% !important; margin-bottom: 10px; }
+    h1, h2 { font-size: 1.6rem !important; text-align: center; }
+    .logos-section img { width: 50px !important; height: 50px !important; }
+} 
     </style>
 </head>
 <body>
@@ -249,4 +270,5 @@
         }
     </script>
 </body>
+
 </html>
