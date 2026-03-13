@@ -111,13 +111,16 @@
         margin: 10px auto !important; 
         padding: 10px !important; 
     }
-    .names-grid, .flex-container {
-        display: flex; flex-direction: column; gap: 10px;
+   .names-grid, .flex-container, .row {
+        display: flex !important;
+        flex-direction: column !important; /* ترتيب الأسماء عمودياً للموبايل */
+        align-items: center !important;
+        text-align: center !important;
+        gap: 20px !important;
     }
-    .btn { width: 90% !important; margin-bottom: 10px; }
-    h1 { font-size: 1.6rem !important; }
-    .logos-section img { width: 50px !important; height: 50px !important; }
-} 
+    .names-grid > div {
+        width: 100% !important; /* كل اسم يأخذ العرض كاملاً براحة */
+    }
     </style>
 </head>
 <body>
@@ -197,3 +200,4 @@
 </body>
 
 </html>
+
