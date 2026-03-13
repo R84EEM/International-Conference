@@ -76,6 +76,37 @@
         .time-card strong { font-size: 1.2rem; color: #fff; }
 
         footer { text-align: center; padding: 40px; background: rgba(0,0,0,0.7); border-top: 2px solid var(--gold); margin-top: 60px; }
+        @media (max-width: 768px) {
+    /* ضبط عرض الصندوق الرئيسي */
+    .container, .about-section, .glass-box {
+        width: 92% !important;
+        padding: 20px !important;
+        margin: 15px auto !important;
+    }
+
+    /* تنسيق العناوين (الرؤية، الرسالة، الأهداف) */
+    h1, h2, h3 {
+        font-size: 1.5rem !important;
+        text-align: center !important;
+        line-height: 1.4 !important;
+        margin-bottom: 15px !important;
+    }
+
+    /* أهم جزء: جعل الفقرات النصية مريحة للعين */
+    p, li {
+        font-size: 15px !important;
+        line-height: 1.8 !important; /* زيادة المسافة بين الأسطر لسهولة القراءة */
+        text-align: justify !important; /* توزيع النص ليكون متساوياً من الأطراف */
+        margin-bottom: 12px !important;
+    }
+
+    /* إذا كان هناك صور داخل "عن المؤتمر" تصبح بعرض كامل */
+    img {
+        max-width: 100% !important;
+        height: auto !important;
+        border-radius: 10px;
+    }
+}
     </style>
 </head>
 <body>
@@ -195,4 +226,5 @@
     </footer>
 
 </body>
+
 </html>
