@@ -127,27 +127,30 @@
             .table-wrapper { flex-direction: column; } 
             table { width: 100%; } 
         }
-       @media (max-width: 768px) {
-    body { font-size: 14px; }
-    .container, .glass-box, .header-section, .content-section { 
-        width: 92% !important; 
-        margin: 10px auto !important; 
-        padding: 15px !important; 
+   @media (max-width: 768px) {
+    /* جعل الأسماء تظهر اثنين في كل سطر بشكل متوازن */
+    .names-grid, .committee-grid {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important; /* تقسيم الشاشة لنصفين */
+        gap: 15px !important;
+        padding: 10px !important;
     }
-    .names-grid, .flex-container, .row, .committee-grid {
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
+
+    /* ضبط حجم الخط ليتناسب مع التقسيم الجديد */
+    .names-grid div, .committee-member {
+        font-size: 12px !important;
         text-align: center !important;
-        gap: 20px !important;
+        background: rgba(255, 255, 255, 0.05); /* لمسة زجاجية خفيفة لكل اسم */
+        padding: 10px;
+        border-radius: 8px;
     }
-    .names-grid > div, .committee-member {
-        width: 100% !important;
+
+    /* العناوين الكبيرة تبقى في سطر مستقل */
+    h1, .main-title {
+        grid-column: span 2 !important; 
+        font-size: 1.5rem !important;
     }
-    .btn { width: 90% !important; margin-bottom: 10px; }
-    h1, h2 { font-size: 1.6rem !important; text-align: center; }
-    .logos-section img { width: 50px !important; height: 50px !important; }
-} 
+}
     </style>
 </head>
 <body>
@@ -272,3 +275,4 @@
 </body>
 
 </html>
+
