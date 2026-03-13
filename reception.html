@@ -21,6 +21,34 @@
 
         @media (max-width: 1000px) { .reception-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 650px) { .reception-grid { grid-template-columns: 1fr; } }
+       @media (max-width: 768px) {
+    /* تنسيق لجنة الاستقبال لتكون (2 في كل سطر) */
+    .names-grid, .reception-grid, .flex-container {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 15px !important;
+        padding: 10px !important;
+    }
+
+    /* لمسة جمالية لكل بطاقة اسم في الاستقبال */
+    .names-grid div, .reception-member, .flex-item {
+        font-size: 13px !important; /* خط أوضح قليلاً */
+        text-align: center !important;
+        background: rgba(255, 255, 255, 0.1) !important; /* خلفية زجاجية أوضح */
+        padding: 15px 5px !important;
+        border-radius: 12px !important;
+        border: 1px solid rgba(255, 255, 255, 0.15) !important;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* ظل خفيف للفخامة */
+    }
+
+    /* العناوين (مثل: لجنة الاستقبال) */
+    h1, h2, .main-title {
+        grid-column: span 2 !important; 
+        font-size: 1.6rem !important;
+        margin-bottom: 25px !important;
+        text-shadow: 1px 1px 5px rgba(0,0,0,0.3);
+    }
+} 
     </style>
 </head>
 <body>
@@ -126,4 +154,5 @@
         }
     </script>
 </body>
+
 </html>
