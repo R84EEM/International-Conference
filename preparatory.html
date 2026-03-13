@@ -95,6 +95,39 @@
             table { width: 100%; }
             .search-box { width: 90%; }
         }
+        @media (max-width: 768px) {
+    /* تنسيق القوائم والأسماء لتكون (2 في كل سطر) */
+    .names-grid, .committee-grid, .flex-container {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+        gap: 12px !important;
+        padding: 10px !important;
+    }
+
+    /* لمسة جمالية لكل خلية اسم */
+    .names-grid div, .committee-member, .flex-item {
+        font-size: 12px !important;
+        text-align: center !important;
+        background: rgba(255, 255, 255, 0.08) !important;
+        padding: 12px 5px !important;
+        border-radius: 10px !important;
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+
+    /* العناوين الكبيرة تأخذ السطر كاملاً */
+    h1, h2, .main-title {
+        grid-column: span 2 !important; 
+        font-size: 1.5rem !important;
+        margin-bottom: 20px !important;
+    }
+
+    /* ضبط الأزرار لتكون واضحة وسهلة الضغط */
+    .btn {
+        grid-column: span 2 !important; /* الزر يأخذ العرض كاملاً تحت الأسماء */
+        width: 90% !important;
+        margin: 10px auto !important;
+    }
+}
     </style>
 </head>
 <body>
@@ -215,4 +248,5 @@
         }
     </script>
 </body>
+
 </html>
