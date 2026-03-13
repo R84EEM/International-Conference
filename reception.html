@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لجنة الاستقبال - المؤتمر العلمي</title>
+    <style>
+        :root { --primary-blue: #1a237e; --accent-blue: #00d4ff; }
+        body { font-family: 'Segoe UI', sans-serif; background-color: #f4f7f9; margin: 0; }
+        .navbar { background-color: var(--primary-blue); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; color: white; position: sticky; top: 0; z-index: 1000; }
+        .nav-links a { color: white; text-decoration: none; margin-right: 15px; font-weight: bold; font-size: 14px; }
+        .container { max-width: 1300px; margin: 20px auto; padding: 25px; background: white; border-radius: 15px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
+        h2 { text-align: center; color: var(--primary-blue); margin-bottom: 25px; border-bottom: 3px solid var(--accent-blue); padding-bottom: 5px; }
+        .search-box { width: 100%; padding: 15px; margin-bottom: 30px; border: 2px solid var(--primary-blue); border-radius: 30px; font-size: 16px; outline: none; text-align: center; }
+        
+        .reception-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+        table { width: 100%; border-collapse: collapse; background: white; font-size: 12.5px; }
+        td { padding: 8px 12px; border: 1px solid #eee; text-align: right; }
+        tr:nth-child(even) { background-color: #fcfcfc; }
+        tr:hover { background-color: #e3f2fd; font-weight: bold; }
+
+        @media (max-width: 1000px) { .reception-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 650px) { .reception-grid { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">المؤتمر العلمي الدولي التاسع</div>
+       <div class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="Committee1.html">اللجنة العلمية</a>
+            <a href="preparatory.html">اللجنة التحضيرية</a>
+            <a href="reception.html">لجنة الاستقبال</a>
+            <a href="media.html">اللجنة الإعلامية</a>
+            <a href="contact.html" style="background: #ffc107; color: #000 !important; padding: 3px 10px; border-radius: 15px;">اتصل بنا</a>
+        </div>
+            <a href="reception.html" style="color: var(--accent-blue);">لجنة الاستقبال</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>قائمة أسماء لجنة الاستقبال</h2>
+        <input type="text" id="searchInput" onkeyup="filterNames()" placeholder="ابحث عن اسم عضو في لجنة الاستقبال..." class="search-box">
+        
+        <div class="reception-grid">
+            <table class="name-table">
+                <tbody>
+                    <tr><td>م.م خلود منصور حسين</td></tr><tr><td>م.م هناء عباس جواد</td></tr>
+                    <tr><td>م.م خديجة كاطع صبيح</td></tr><tr><td>م. إيلاف موفق جاسم</td></tr>
+                    <tr><td>م.م سها فاضل عباس</td></tr><tr><td>م. حيدر عبد القادر طاهر</td></tr>
+                    <tr><td>م.م غفران عبد حسن</td></tr><tr><td>م.م سرى حسين محمد علي</td></tr>
+                    <tr><td>م.م فاكر عبد الزهرة جبار</td></tr><tr><td>م.م دعاء مؤيد محمد</td></tr>
+                    <tr><td>م.م أحمد عجاج حسين</td></tr><tr><td>م.م أجود ثامر عبود</td></tr>
+                    <tr><td>م.م رشا حامد حسن</td></tr><tr><td>م.م أيسر عبد علي ناموس</td></tr>
+                    <tr><td>م.م فاتن غائب عودة</td></tr><tr><td>م.م أنسام حميد عبود</td></tr>
+                    <tr><td>م.م زهراء عز الدين محمد</td></tr><tr><td>م. سما علاء خليل</td></tr>
+                    <tr><td>م.م ريواء حسين جبار</td></tr><tr><td>م. داخل عبيس حميد</td></tr>
+                    <tr><td>م.م أحمد خلف حسين</td></tr><tr><td>م.م علي كاظم إبراهيم</td></tr>
+                    <tr><td>م.م عباس إبراهيم أحمد</td></tr><tr><td>م.م مروج مزاحم حسين</td></tr>
+                    <tr><td>م.م محمد عباس رويح</td></tr><tr><td>م.م شيرين إسماعيل حسن</td></tr>
+                    <tr><td>م.م مجيد صابر مزعل</td></tr><tr><td>م.م يحيى باهر جابر</td></tr>
+                    <tr><td>م.م خلود إبراهيم حسن</td></tr>
+                </tbody>
+            </table>
+
+            <table class="name-table">
+                <tbody>
+                    <tr><td>م.م هديل عيدان حليوت</td></tr><tr><td>م.م جيلان رحيم كريم</td></tr>
+                    <tr><td>م.م علي شمال كزار</td></tr><tr><td>م.م داليا جعفر هادي</td></tr>
+                    <tr><td>م.م منى أحمد جاسم</td></tr><tr><td>م. جلال عبد لفتة</td></tr>
+                    <tr><td>م.م فراس سالم ناجي</td></tr><tr><td>م.م حميد مسعود جاسم</td></tr>
+                    <tr><td>م.م حيدر عبد الكريم العيبي</td></tr><tr><td>م.م خولة إبراهيم حسين</td></tr>
+                    <tr><td>م.م رياض محسن حميد</td></tr><tr><td>م.م رشا جواد كاظم</td></tr>
+                    <tr><td>م.م ياسر فتحي محمود</td></tr><tr><td>م.م آيات أسعد مجيد</td></tr>
+                    <tr><td>م.م خولة كريم عودة</td></tr><tr><td>م.م ثرى حميد أحمد</td></tr>
+                    <tr><td>م.م أحمد دهام دعشور</td></tr><tr><td>م.م أنسام فائق نعمان</td></tr>
+                    <tr><td>م.م رسل علاء حسين</td></tr><tr><td>م. نداء هادي صالح</td></tr>
+                    <tr><td>م.م منتهى رحيمة عيسى</td></tr><tr><td>م.م مثنى علي فيصل</td></tr>
+                    <tr><td>م. علي حسن جاسم</td></tr><tr><td>م.م حيدر محمد عبد</td></tr>
+                    <tr><td>م.م سلمان عزيز علوان</td></tr><tr><td>م.م حيدر غانم حسن</td></tr>
+                    <tr><td>م.م شهد عبد الكاظم فرحان</td></tr><tr><td>م.م ستار عبيد عباس</td></tr>
+                    <tr><td>م.م راقية خضر عباس</td></tr>
+                </tbody>
+            </table>
+
+            <table class="name-table">
+                <tbody>
+                    <tr><td>م.م محمد هاني سلمان</td></tr><tr><td>م.م بلسم عبد الكاظم حميدي</td></tr>
+                    <tr><td>م.م سجا حامد حنتوش</td></tr><tr><td>م.م علي مالك ناموس</td></tr>
+                    <tr><td>م.م سراب تاج الدين قاسم</td></tr><tr><td>م.م أميرة حسين حسن</td></tr>
+                    <tr><td>م.م خالد منعم علي</td></tr><tr><td>م. عمر موحان جبار</td></tr>
+                    <tr><td>م.م حقي إسماعيل إبراهيم</td></tr><tr><td>م.م ليث محمد فاضل</td></tr>
+                    <tr><td>م.م إسراء عبد العزيز عبد</td></tr><tr><td>م.م سندباد عجيل مزهر</td></tr>
+                    <tr><td>م.م ميرفت عبد الجبار عبد</td></tr><tr><td>م.م مها سمير عبد العظيم</td></tr>
+                    <tr><td>م.م شيماء غضيب كاظم</td></tr><tr><td>م.م هناء حسون حاشوش</td></tr>
+                    <tr><td>م.م أيمن عبد الستار جاسم</td></tr><tr><td>م.م أنهار محمد بريسم</td></tr>
+                    <tr><td>م.م رحيم عليوي زغير</td></tr><tr><td>م.م محمد عبد الكاظم حسن</td></tr>
+                    <tr><td>م.م حسام جبار لطيف</td></tr><tr><td>م.م صفاء عبد العزيز جاسم</td></tr>
+                    <tr><td>م.م هديل ستار حمادي</td></tr><tr><td>م.م ثائر حسين علي</td></tr>
+                    <tr><td>م.م أمال أحمد زعون</td></tr><tr><td>م.م زينة عداي حسين</td></tr>
+                    <tr><td>م.م وفاء جودة بادي</td></tr><tr><td>م.م محسن خلف نايف</td></tr>
+                    <tr><td>أخلاص حسن علي</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+<div class="footer-credit">
+            تم التصميم والتطوير بواسطة: م.د . ريم محمد خضير
+        </div>
+    <script>
+        function filterNames() {
+            var input = document.getElementById("searchInput");
+            var filter = input.value.toUpperCase();
+            var tables = document.getElementsByClassName("name-table");
+            for (var i = 0; i < tables.length; i++) {
+                var tr = tables[i].getElementsByTagName("tr");
+                for (var j = 0; j < tr.length; j++) {
+                    var td = tr[j].getElementsByTagName("td")[0];
+                    if (td) {
+                        var txtValue = td.textContent || td.innerText;
+                        tr[j].style.display = (txtValue.toUpperCase().indexOf(filter) > -1) ? "" : "none";
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

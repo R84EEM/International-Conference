@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اللجنة العلمية - المؤتمر الدولي</title>
+    <style>
+        :root { 
+            --primary: #1a237e; 
+            --accent: #00d4ff; 
+            --gold: #d4af37; 
+            --bg: #f0f2f5; 
+        }
+        
+        body { 
+            direction: rtl; 
+            /* تم استخدام Tahoma لضمان اتصال الحروف العربية تماماً */
+            font-family: 'Tahoma', 'Arial', sans-serif; 
+            background-color: var(--bg); 
+            margin: 0; 
+            padding: 0; 
+            letter-spacing: 0 !important;
+            word-spacing: normal !important;
+        }
+        
+        /* شريط التنقل */
+        .navbar { 
+            background-color: var(--primary); 
+            padding: 15px 5%; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2); 
+        }
+        
+        .logo { 
+            font-size: 18px; 
+            font-weight: bold; 
+            color: white; 
+            border-right: 3px solid var(--accent); 
+            padding-right: 10px; 
+        }
+        
+        .nav-links { display: flex; align-items: center; }
+        
+        .nav-links a { 
+            color: white !important; 
+            text-decoration: none; 
+            margin-right: 25px; 
+            font-weight: bold; 
+            font-size: 15px; 
+            transition: 0.3s; 
+        }
+        
+        .nav-links a:hover { color: var(--accent) !important; }
+
+        /* المحتوى */
+        .container { 
+            max-width: 1200px; 
+            margin: 30px auto; 
+            background: white; 
+            padding: 30px; 
+            border-radius: 15px; 
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05); 
+        }
+        
+        h1 { text-align: center; color: var(--primary); margin-bottom: 20px; }
+        
+        .search-box { 
+            width: 100%; 
+            padding: 15px; 
+            margin-bottom: 25px; 
+            border: 2px solid #e0e0e0; 
+            border-radius: 30px; 
+            font-size: 16px; 
+            outline: none; 
+            text-align: center; 
+            font-family: 'Tahoma', sans-serif;
+        }
+        
+        .table-wrapper { display: flex; gap: 20px; }
+        
+        table { 
+            width: 50%; 
+            border-collapse: collapse; 
+            background: white; 
+            border-radius: 10px; 
+            overflow: hidden; 
+            font-size: 13px; 
+            border: 1px solid #eee; 
+        }
+        
+        th { background: var(--primary); color: white; padding: 12px; border: 1px solid #ddd; }
+        
+        td { 
+            padding: 10px; 
+            border: 1px solid #eee; 
+            text-align: right; 
+            unicode-bidi: isolate; /* لضمان عدم تداخل الحروف مع الأرقام */
+        }
+        
+        tr:nth-child(even) { background-color: #f9faff; }
+        tr:hover { background-color: #f1f4ff; }
+        
+        .id-col { 
+            font-weight: bold; 
+            color: var(--primary); 
+            text-align: center; 
+            width: 35px; 
+            background: #f8f9fa; 
+        }
+
+        /* توقيع الدكتورة ريم */
+        .footer-credit { 
+            text-align: center; 
+            padding: 20px; 
+            color: var(--primary); 
+            border-top: 1px solid #ddd; 
+            margin-top: 20px; 
+            font-weight: bold; 
+        }
+
+        @media (max-width: 900px) { 
+            .table-wrapper { flex-direction: column; } 
+            table { width: 100%; } 
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">المؤتمر العلمي الدولي الثاني</div>
+        <div class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="Committee1.html">اللجنة العلمية</a>
+            <a href="preparatory.html">اللجنة التحضيرية</a>
+            <a href="reception.html">لجنة الاستقبال</a>
+            <a href="media.html">اللجنة الإعلامية</a>
+            <a href="contact.html">اتصل بنا</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>قائمة بأسماء اللجنة العلمية</h1>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="ابحث عن اسم عضو في اللجنة..." class="search-box">
+
+        <div class="table-wrapper">
+            <table id="table1">
+                <thead><tr><th>ت</th><th>اللقب العلمي والاسم</th><th>مكان العمل</th></tr></thead>
+                <tbody>
+                    <tr><td class="id-col">1</td><td>أ.د وليد خالد عبد / رئيس اللجنة</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">2</td><td>أ.د آلاء فؤاد صالح</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">3</td><td>أ.د عباس علوان لفته</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">4</td><td>أ.د غسق غازي سلوم</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">5</td><td>أ.د حسن كامل رسن</td><td>جامعة بغداد/التربية ابن الهيثم</td></tr>
+                    <tr><td class="id-col">6</td><td>أ.د الهام جبار فارس</td><td>جامعة بغداد/التربية ابن الهيثم</td></tr>
+                    <tr><td class="id-col">7</td><td>أ.د زينب عزيز احمد</td><td>جامعة بغداد/التربية ابن الهيثم</td></tr>
+                    <tr><td class="id-col">8</td><td>أ.م.د أفراح ياسين محمد</td><td>جامعة بغداد/التربية ابن الهيثم</td></tr>
+                    <tr><td class="id-col">9</td><td>م.د قاسم إبراهيم خلف</td><td>مركز البحوث والدراسات التربوية</td></tr>
+                    <tr><td class="id-col">10</td><td>أ.م.د جاسم محمد دايش</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">11</td><td>أ.م.د نجلة إبراهيم مصطفى</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">12</td><td>أ.م.د جبار سويس حنين</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">13</td><td>أ.م.د هدى صالح محمد</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">14</td><td>أ.م.د بتول مالك عباس</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">15</td><td>أ.م.د ندى كاظم حسين</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">16</td><td>أ.م.د حيدر فاروق سلمان</td><td>الكلية التربوية المفتوحة</td></tr>
+                    <tr><td class="id-col">17</td><td>أ.م.د حيدر شاكر نايف</td><td>الكلية التربوية المفتوحة</td></tr>
+                    <tr><td class="id-col">18</td><td>أ.م.د مها عبد الرزاق خضير</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">19</td><td>أ.م.د علي ستار عبد الرضا</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">20</td><td>أ.م.د مي مصدق دلفي</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">21</td><td>أ.م.د علي جاسم حسين</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">22</td><td>أ.م.د غالب علي حسن</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">23</td><td>أ.م.د محمود حسن زغير</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">24</td><td>أ.م.د فاضل محمود عليوي</td><td>وزارة التعليم العالي</td></tr>
+                    <tr><td class="id-col">25</td><td>أ.م.د منى محمد حسون</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">26</td><td>أ.م.د أزهار علي مهدي</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">27</td><td>أ.م.د رغد سلمان خليل</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">28</td><td>أ.م.د مهدي ناهي مطير</td><td>تربية الرصافة الثانية</td></tr>
+                </tbody>
+            </table>
+
+            <table id="table2">
+                <thead><tr><th>ت</th><th>اللقب العلمي والاسم</th><th>مكان العمل</th></tr></thead>
+                <tbody>
+                    <tr><td class="id-col">29</td><td>أ.د قصي عبد العباس حسن</td><td>الجامعة المستنصرية</td></tr>
+                    <tr><td class="id-col">30</td><td>أ.د خضير عباس جري</td><td>الجامعة المستنصرية</td></tr>
+                    <tr><td class="id-col">31</td><td>أ.د محمد كاظم جاسم</td><td>الجامعة المستنصرية</td></tr>
+                    <tr><td class="id-col">32</td><td>أ.د سعدي جاسم عطية</td><td>الجامعة المستنصرية</td></tr>
+                    <tr><td class="id-col">33</td><td>أ.م.د فوزي ثعبان حميد</td><td>الجامعة المستنصرية</td></tr>
+                    <tr><td class="id-col">34</td><td>أ.د رضاب حافظ حميد</td><td>الجامعة المستنصرية</td></tr>
+                    <tr><td class="id-col">35</td><td>أ.م.د خمائل مهدي صالح</td><td>الكلية التربوية المفتوحة</td></tr>
+                    <tr><td class="id-col">36</td><td>أ.م.د zهرة عباس فاضل</td><td>الكلية التربوية المفتوحة</td></tr>
+                    <tr><td class="id-col">37</td><td>أ.م.د سوسن وحيد جبار</td><td>الكلية التربوية المفتوحة</td></tr>
+                    <tr><td class="id-col">38</td><td>أ.م.د ميس علاء الدين محمد</td><td>الكلية التربوية المفتوحة</td></tr>
+                    <tr><td class="id-col">39</td><td>أ.م.د حلا زوين محمد</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">40</td><td>أ.م.د فادية جمعة إسماعيل</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">41</td><td>أ.م.د منى حامد طه</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">42</td><td>أ.م.د جعفر محمد سلمان</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">43</td><td>أ.م.د أمير إبراهيم خداداد</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">44</td><td>أ.م.د سهاد عبد النبي سلمان</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">45</td><td>أ.م.د جنان جبار شلتاغ</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">46</td><td>أ.م.د عباس علي كريدي</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">47</td><td>أ.م.د نضال سهيم حسن</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">48</td><td>أ.م.د كندي ياسين سعود</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">49</td><td>أ.م.د سهاد أكرم مجيد</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">50</td><td>أ.م.د قصي محمود راضي</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">51</td><td>أ.م.د فائق محمد حسين</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">52</td><td>أ.م.د جعفر محمود سلمان</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">53</td><td>أ.م.د جعفر ظفير حسوني</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">54</td><td>أ.م.د زينب جبار رحيمه</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">55</td><td>أ.م.د حسام رفعت عبد</td><td>تربية الرصافة الثانية</td></tr>
+                    <tr><td class="id-col">56</td><td>أ.م.د نضال مالك سعدون</td><td>تربية الرصافة الثانية</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="footer-credit">
+            تم التصميم والتطوير بواسطة: م. د . ريم محمد خضير
+        </div>
+    </div>
+
+    <script>
+        function myFunction() {
+            var input, filter, table1, table2, tr1, tr2, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table1 = document.getElementById("table1");
+            table2 = document.getElementById("table2");
+            tr1 = table1.getElementsByTagName("tr");
+            tr2 = table2.getElementsByTagName("tr");
+
+            for (i = 1; i < tr1.length; i++) {
+                td = tr1[i].getElementsByTagName("td")[1];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    tr1[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
+                }
+            }
+            for (i = 1; i < tr2.length; i++) {
+                td = tr2[i].getElementsByTagName("td")[1];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    tr2[i].style.display = txtValue.toUpperCase().indexOf(filter) > -1 ? "" : "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

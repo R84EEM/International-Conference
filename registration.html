@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الباحثين - المؤتمر الدولي التاسع</title>
+    <style>
+        :root { --primary: #1a237e; --accent: #00d4ff; --gold: #d4af37; --bg: #f0f2f5; }
+        
+        body { direction: rtl; font-family: 'Tahoma', sans-serif; background-color: var(--bg); margin: 0; padding: 0; }
+        
+        /* شريط التنقل */
+        .navbar { background-color: var(--primary); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; }
+        .logo { font-size: 18px; font-weight: bold; color: white; border-right: 3px solid var(--accent); padding-right: 10px; }
+        .nav-links a { color: white !important; text-decoration: none; margin-right: 20px; font-weight: bold; font-size: 14px; }
+
+        .container { max-width: 700px; margin: 40px auto; background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 25px rgba(0,0,0,0.1); }
+        h1 { text-align: center; color: var(--primary); margin-bottom: 10px; }
+        p.subtitle { text-align: center; color: #666; margin-bottom: 30px; font-size: 14px; }
+
+        .reg-form { display: grid; gap: 20px; }
+        .form-group { display: flex; flex-direction: column; gap: 8px; }
+        label { font-weight: bold; color: var(--primary); font-size: 14px; }
+        
+        input, select, textarea { 
+            padding: 12px; 
+            border: 2px solid #e0e0e0; 
+            border-radius: 8px; 
+            font-family: 'Tahoma', sans-serif; 
+            font-size: 14px;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        input:focus, select:focus, textarea:focus { border-color: var(--accent); box-shadow: 0 0 8px rgba(0,212,255,0.2); }
+
+        /* تنسيق رفع الملف */
+        .file-upload { 
+            border: 2px dashed var(--gold); 
+            padding: 20px; 
+            text-align: center; 
+            border-radius: 8px; 
+            background: #fffdf5;
+            cursor: pointer;
+        }
+        .file-upload input[type="file"] { border: none; padding: 0; width: 100%; }
+
+        button.submit-btn { 
+            background: linear-gradient(135deg, var(--primary), #283593); 
+            color: white; 
+            padding: 15px; 
+            border: none; 
+            border-radius: 8px; 
+            font-size: 16px; 
+            font-weight: bold; 
+            cursor: pointer; 
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+        button.submit-btn:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(26,35,126,0.3); }
+
+        .footer-credit { text-align: center; padding: 20px; color: #888; font-size: 13px; border-top: 1px solid #eee; margin-top: 30px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">المؤتمر العلمي الدولي التاسع</div>
+            <div class="nav-links">
+            <a href="index.html">الرئيسية</a>
+            <a href="Committee1.html">اللجنة العلمية</a>
+            <a href="preparatory.html">اللجنة التحضيرية</a>
+            <a href="reception.html">لجنة الاستقبال</a>
+            <a href="media.html">اللجنة الإعلامية</a>
+            <a href="contact.html" style="background: #ffc107; color: #000 !important; padding: 3px 10px; border-radius: 15px;">اتصل بنا</a>
+        </div>
+            <a href="registration.html">سجل الآن</a>
+            <a href="contact.html">اتصل بنا</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>استمارة تسجيل بحث</h1>
+        <p class="subtitle">يرجى ملء كافة الحقول بدقة لضمان استلام بحثكم بنجاح</p>
+
+        <form class="reg-form">
+            <div class="form-group">
+                <label>الاسم الثلاثي واللقب</label>
+                <input type="text" placeholder="أدخل اسمك الكامل" required>
+            </div>
+
+            <div class="form-group">
+                <label>البريد الإلكتروني</label>
+                <input type="email" placeholder="example@email.com" required title="يرجى كتابة البريد بشكل صحيح">
+            </div>
+
+            <div class="form-group">
+                <label>المرتبة العلمية</label>
+                <select required>
+                    <option value="">اختر المرتبة العلمية...</option>
+                    <option>أستاذ (أ.د)</option>
+                    <option>أستاذ مساعد (أ.م.د)</option>
+                    <option>مدرس (م.د)</option>
+                    <option>مدرس مساعد (م.م)</option>
+                    <option>باحث / طالب دراسات</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>عنوان البحث</label>
+                <input type="text" placeholder="اكتب العنوان الكامل للبحث" required>
+            </div>
+
+            <div class="form-group">
+                <label>ملخص البحث (Abstract)</label>
+                <textarea rows="4" placeholder="اكتب ملخصاً بسيطاً للبحث..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>رفع البحث الكامل (Word أو PDF)</label>
+                <div class="file-upload">
+                    <input type="file" accept=".doc,.docx,.pdf" required>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">إرسال طلب التسجيل والبحث</button>
+        </form>
+
+        <div class="footer-credit">
+            تصميم وتطوير: م.د . ريم محمد حضير
+        </div>
+    </div>
+
+</body>
+</html>
