@@ -104,6 +104,20 @@
             display: block; text-shadow: 0 0 12px rgba(212, 175, 55, 0.7); 
         }
         .designer-dept { font-size: 0.8rem; color: var(--accent); font-weight: bold; }
+       @media (max-width: 768px) {
+    body { font-size: 14px; }
+    .container, .glass-box, .header-section { 
+        width: 92% !important; 
+        margin: 10px auto !important; 
+        padding: 10px !important; 
+    }
+    .names-grid, .flex-container {
+        display: flex; flex-direction: column; gap: 10px;
+    }
+    .btn { width: 90% !important; margin-bottom: 10px; }
+    h1 { font-size: 1.6rem !important; }
+    .logos-section img { width: 50px !important; height: 50px !important; }
+} 
     </style>
 </head>
 <body>
@@ -181,4 +195,5 @@
     </footer>
 
 </body>
+
 </html>
